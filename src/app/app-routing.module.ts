@@ -4,6 +4,7 @@ import { NotFoundComponent } from './not-found/not-found.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TablesComponent } from './tables/tables.component';
 import { AuthGuard } from './auth.guard';
+import { LoginComponent } from './login/login.component';
 
 
 const fallbackRoute: Route = {
@@ -14,6 +15,7 @@ const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'notfound', component: NotFoundComponent },
   { path: 'dashboard', component: DashboardComponent},
+  { path: 'login', component: LoginComponent},
   { path: 'tables', component: TablesComponent,
   canActivate: [AuthGuard], },
   { path: 'tables/:type', component: TablesComponent,

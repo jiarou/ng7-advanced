@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { NotFoundComponent } from './not-found/not-found.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { TablesComponent } from './tables/tables.component';
+import { LoginComponent } from './login/login.component';
 
 
 @NgModule({
@@ -12,7 +13,8 @@ import { TablesComponent } from './tables/tables.component';
     AppComponent,
     NotFoundComponent,
     DashboardComponent,
-    TablesComponent
+    TablesComponent,
+    LoginComponent
   ],
   imports: [
     BrowserModule,
