@@ -11,6 +11,7 @@ export class AuthGuard implements CanActivate {
     next: ActivatedRouteSnapshot,
     state: RouterStateSnapshot): Observable<boolean> | Promise<boolean> | boolean {
      if (!localStorage['email']) {
+       // if no email, then redirect to login
        this.router.navigateByUrl('/login');
        return false;
      } else {

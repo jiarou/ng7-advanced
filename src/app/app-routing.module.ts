@@ -14,7 +14,8 @@ const fallbackRoute: Route = {
 const routes: Routes = [
   { path: '', redirectTo: '/dashboard', pathMatch: 'full' },
   { path: 'notfound', component: NotFoundComponent },
-  { path: 'dashboard', component: DashboardComponent},
+  { path: 'dashboard', component: DashboardComponent,
+  },
   { path: 'login', component: LoginComponent},
   { path: 'tables', component: TablesComponent,
    canActivate: [AuthGuard], },
