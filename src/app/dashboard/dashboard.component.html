@@ -244,10 +244,10 @@
                       <a href="#"><i class="fa fa-bar-chart-o fa-fw"></i> Charts<span class="fa arrow"></span></a>
                       <ul class="nav nav-second-level">
                           <li>
-                              <a routerLink="/charts/flot" > Flot Charts</a>
+                              <a routerLink="/charts/flot" routerLinkActive="active"> Flot Charts</a>
                           </li>
                           <li>
-                              <a href="morris.html">Morris.js Charts</a>
+                              <a [routerLink]="['/charts/morris']"  routerLinkActive="active">Morris.js Charts</a>
                           </li>
                       </ul>
                       <!-- /.nav-second-level -->
