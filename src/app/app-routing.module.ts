@@ -18,7 +18,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent,
   },
   { path: 'login', component: LoginComponent},
-  { path: 'forms', component: FormsComponent}
+  { path: 'forms', component: FormsComponent},
   { path: 'tables', component: TablesComponent,
    canActivate: [AuthGuard], },
   { path: 'tables/:type', component: TablesComponent,

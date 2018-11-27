@@ -349,7 +349,7 @@
                       <div class="panel-body">
                           <div class="row">
                               <div class="col-lg-6">
-                                  <form role="form" [class.has-error]="tName.invalid&&tName.touched">
+                                  <form role="form" [class.has-error]="form.submitted && tName.invalid" (ngSubmit)="onSubmit(form)" #form="ngForm">
                                       <div class="form-group">
                                           <label>Text Input</label>
                                           <input class="form-control" name="name" [(ngModel)]="data.name"
@@ -370,10 +370,12 @@ tName.statusChanges = {{tName.statusChanges | json}}
                                           <p class="help-block" *ngIf="tName.errors?.required">Name is required. </p>
                                           <p class="help-block" *ngIf="tName.errors?.minlength">名字欄位有長度限制,至少 {{ tName.errors.minlength.requiredLength}}個字元以上,您輸入 {{ tName.errors.minlength.actualLength}} 個字元</p>
                                       </div>
-                                      <div class="form-group">
+                                      <div class="form-group" [class.has-error]="form.submitted && tEmail.invalid">
                                           <label>Text Input with Placeholder</label>
-                                          <input class="form-control" name="email" [(ngModel)]="data.email" required placeholder="Enter email">
+                                          <input class="form-control" name="email" [(ngModel)]="data.email" #tEmail='ngModel' required placeholder="Enter email">
+                                          <p class="help-block" *ngIf="tEmail.errors?.required">Email 為必填欄位</p>
                                       </div>
+
                                       <div class="form-group">
                                           <label>Static Control</label>
                                           <p class="form-control-static">email@example.com</p>
