@@ -8,6 +8,7 @@ import { NgForm } from '@angular/forms';
 })
 export class FormsComponent implements OnInit {
   data: any = {};
+  items: any[] = [];
   constructor() { }
 
   ngOnInit() {
