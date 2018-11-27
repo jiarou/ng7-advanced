@@ -5,6 +5,7 @@ import { DashboardComponent } from './dashboard/dashboard.component';
 import { TablesComponent } from './tables/tables.component';
 import { AuthGuard } from './auth.guard';
 import { LoginComponent } from './login/login.component';
+import { FormsComponent } from './forms/forms.component';
 
 
 const fallbackRoute: Route = {
@@ -17,6 +18,7 @@ const routes: Routes = [
   { path: 'dashboard', component: DashboardComponent,
   },
   { path: 'login', component: LoginComponent},
+  { path: 'forms', component: FormsComponent}
   { path: 'tables', component: TablesComponent,
    canActivate: [AuthGuard], },
   { path: 'tables/:type', component: TablesComponent,
