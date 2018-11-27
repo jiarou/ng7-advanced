@@ -9,6 +9,7 @@ import { LoginComponent } from './login/login.component';
 import { FormsModule } from '@angular/forms';
 import { ReactiveFormsModule } from '@angular/forms';
 import { FormsComponent } from './forms/forms.component';
+import { Form2Component } from './form2/form2.component';
 
 
 
@@ -20,7 +21,8 @@ import { FormsComponent } from './forms/forms.component';
     DashboardComponent,
     TablesComponent,
     LoginComponent,
-    FormsComponent
+    FormsComponent,
+    Form2Component
   ],
   imports: [
     BrowserModule,
